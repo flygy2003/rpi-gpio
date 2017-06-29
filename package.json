@@ -1,0 +1,24 @@
+{
+  "name": "rpi-gpio-integration",
+  "version": "1.0.0",
+  "description": "rpi-gpio pkg integration w/ raspi in Saadat Residence",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flygy2003/rpi-gpio.git"
+  },
+  "author": "Neekon Saadat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flygy2003/rpi-gpio/issues"
+  },
+  "homepage": "https://github.com/flygy2003/rpi-gpio#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "delay": "^2.0.0",
+    "firebase": "^4.1.3"
+  }
+}
