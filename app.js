@@ -5,13 +5,17 @@ gpio.setup(32, gpio.DIR_OUT, () => {
   var isOn = false;
   const interval = setInterval( () => {
     seconds++
-    if(seconds % 3 == 0) {
-      gpio.write(32, true)
-    }else if (seconds % 2 == 0) {
-      gpio.write(32, false)
+    if(seconds == 3) {
+      if(isOn) {
+        gpio.write(32, false)
+      }else {
+        gpio.write(32, true)
+      }
+      isOn = !isOn
+      seconds = 0
     }
   }, 1000 )
-} );
+} )
 
 // function write() {
 //   gpio.write(32, true, off);
