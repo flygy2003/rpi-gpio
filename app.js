@@ -8,7 +8,7 @@ var config = {
   storageBucket: "home-b7104.appspot.com",
   messagingSenderId: "42864256502"
 }
-fb9.initializeApp(config)
+fb.initializeApp(config)
 
 var db = fb.database().ref()
 var pin = [3, 5, 7,
