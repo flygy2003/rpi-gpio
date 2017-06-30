@@ -1,6 +1,17 @@
 var gpio = require('rpi-gpio');
 
-gpio.setup(32, gpio.DIR_OUT, write);
+gpio.setup(32, gpio.DIR_OUT, () => {
+  var seconds = 0;
+  var isOn = false;
+  const interval = setInterval( () => {
+    seconds++
+    if(seconds % 3 == 0) {
+      gpio.write(32, true)
+    }else if (seconds % 2 == 0) {
+      gpio.write(32, false)
+    }
+  }, 1000 )
+} );
 
 // function write() {
 //   gpio.write(32, true, off);
@@ -13,14 +24,3 @@ gpio.setup(32, gpio.DIR_OUT, write);
 //   setTimeout(function() {
 //   }, 1000);
 // }
-
-var seconds = 0;
-var isOn = false;
-const interval = setInterval( () => {
-  seconds++
-  if(seconds % 3 == 0) {
-    gpio.write(32, true)
-  }else if (seconds % 2 == 0) {
-    gpio.write(32, false)
-  }
-}, 1000 )
