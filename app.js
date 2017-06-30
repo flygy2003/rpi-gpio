@@ -38,7 +38,7 @@ io.setup(pin[3], DIR_OUT, () => {
 io.setup(pin[4], DIR_OUT, () => {
 
 })
-
+\
 io.setup(pin[5], DIR_OUT, () => {
 
 })
