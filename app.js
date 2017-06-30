@@ -9,7 +9,8 @@ var config = {
   messagingSenderId: "42864256502"
 }
 firebase.initializeApp(config)
-var db = fiebase.database().ref()
+
+var db = fb.database().ref()
 var pin = [3, 5, 7,
            8, 10, 12,
            11, 13, 15,
