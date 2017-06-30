@@ -4,33 +4,12 @@ gpio.setup(32, gpio.DIR_OUT, write);
 
 function write() {
     setTimeout(function() {
-      gpio.write(32, true, function(err) {
-        if (err) throw err;
-      });
+      gpio.write(32, true, off);
     }, 3000);
-    setTimeout(function() {
-      gpio.write(32, false, function(err) {
-        if (err) throw err;
-      });
-    }, 2000);
-    setTimeout(function() {
-      gpio.write(32, true, function(err) {
-        if (err) throw err;
-      });
-    }, 3000);
-    setTimeout(function() {
-      gpio.write(32, false, function(err) {
-        if (err) throw err;
-      });
-    }, 2000);
-    setTimeout(function() {
-      gpio.write(32, true, function(err) {
-        if (err) throw err;
-      });
-    }, 3000);
-    setTimeout(function() {
-      gpio.write(32, false, function(err) {
-        if (err) throw err;
-      });
-    }, 2000);
+}
+
+function off() {
+  setTimeout(function() {
+    gpio.write(32, false, write);
+  }, 2000);
 }
