@@ -12,7 +12,7 @@ fb.initializeApp(config)
 
 var db = fb.database().ref()
 var pin = [7, 13, 15,
-           29, 31]
+           29, 31, 32, 33]
 
 io.setup(pin[0], io.DIR_OUT, () => {
   db.child('rooms/all')
