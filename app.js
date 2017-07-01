@@ -11,14 +11,8 @@ var config = {
 fb.initializeApp(config)
 
 var db = fb.database().ref()
-var pin = [3, 5, 7,
-           8, 10, 12,
-           11, 13, 15,
-           16, 18, 19,
-           22, 24, 26,
-           29, 31, 32,
-           33, 35, 37,
-           38, 40]
+var pin = [7, 13, 15,
+           29, 31]
 
 io.setup(pin[0], io.DIR_OUT, () => {
   db.child('rooms/all')
