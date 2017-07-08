@@ -12,7 +12,10 @@ fb.initializeApp(config)
 
 var db = fb.database().ref()
 var pin = [7, 13, 15,
-           29, 31, 32, 33]
+           29, 31, 32,
+           33, 11, 27,
+           37, 32, 26,
+           22, 18, 16]
 
 io.setup(pin[0], io.DIR_OUT, () => {
   db.child('rooms/all')
@@ -76,84 +79,84 @@ io.setup(pin[6], io.DIR_OUT, () => {
     })
   })
 })
-//
-// io.setup(pin[7], io.DIR_OUT, () => {
-//   db.child('rooms/sLivingRoom')
-//     .on('value', (snapshot) => {
-//     io.write(pin[7], snapshot.val(), (err) => {
-//       if (err) throw err
-//     })
-//   })
-// })
-//
-// io.setup(pin[8], io.DIR_OUT, () => {
-//   db.child('rooms/sMasterBedroom')
-//     .on('value', (snapshot) => {
-//     io.write(pin[8], snapshot.val(), (err) => {
-//       if (err) throw err
-//     })
-//   })
-// })
-//
-// io.setup(pin[9], io.DIR_OUT, () => {
-//   db.child('rooms/sNeekonBedroom')
-//     .on('value', (snapshot) => {
-//     io.write(pin[9], snapshot.val(), (err) => {
-//       if (err) throw err
-//     })
-//   })
-// })
-//
-// io.setup(pin[10], io.DIR_OUT, () => {
-//   db.child('rooms/sOffice')
-//     .on('value', (snapshot) => {
-//     io.write(pin[10], snapshot.val(), (err) => {
-//       if (err) throw err
-//     })
-//   })
-// })
-//
-// io.setup(pin[11], io.DIR_OUT, () => {
-//   db.child('rooms/sOfficeBathroom')
-//     .on('value', (snapshot) => {
-//     io.write(pin[11], snapshot.val(), (err) => {
-//       if (err) throw err
-//     })
-//   })
-// })
-//
-// io.setup(pin[12], io.DIR_OUT, () => {
-//   db.child('rooms/sRyanRoom')
-//     .on('value', (snapshot) => {
-//     io.write(pin[12], snapshot.val(), (err) => {
-//       if (err) throw err
-//     })
-//   })
-// })
-//
-// io.setup(pin[13], io.DIR_OUT, () => {
-//   db.child('rooms/sOffice')
-//     .on('value', (snapshot) => {
-//     io.write(pin[13], snapshot.val(), (err) => {
-//       if (err) throw err
-//     })
-//   })
-// })
-//
-// io.setup(pin[14], io.DIR_OUT, () => {
-//   db.child('rooms/sOffice')
-//     .on('value', (snapshot) => {
-//     io.write(pin[14], snapshot.val(), (err) => {
-//       if (err) throw err
-//     })
-//   })
-// })
-//
-// io.setup(pin[15], io.DIR_OUT, () => {
-//   db.child('rooms/sOffice')
-//     .on('value', (snapshot) => {
-//     io.write(pin[15], snapshot.val(), (err) => {
-//       if (err) throw err
-//     })
-//   })
-// })
+
+io.setup(pin[7], io.DIR_OUT, () => {
+  db.child('rooms/sLivingRoom')
+    .on('value', (snapshot) => {
+    io.write(pin[7], snapshot.val(), (err) => {
+      if (err) throw err
+    })
+  })
+})
+
+io.setup(pin[8], io.DIR_OUT, () => {
+  db.child('rooms/sMasterBedroom')
+    .on('value', (snapshot) => {
+    io.write(pin[8], snapshot.val(), (err) => {
+      if (err) throw err
+    })
+  })
+})
+
+io.setup(pin[9], io.DIR_OUT, () => {
+  db.child('rooms/sNeekonBedroom')
+    .on('value', (snapshot) => {
+    io.write(pin[9], snapshot.val(), (err) => {
+      if (err) throw err
+    })
+  })
+})
+
+io.setup(pin[10], io.DIR_OUT, () => {
+  db.child('rooms/sOffice')
+    .on('value', (snapshot) => {
+    io.write(pin[10], snapshot.val(), (err) => {
+      if (err) throw err
+    })
+  })
+})
+
+io.setup(pin[11], io.DIR_OUT, () => {
+  db.child('rooms/sOfficeBathroom')
+    .on('value', (snapshot) => {
+    io.write(pin[11], snapshot.val(), (err) => {
+      if (err) throw err
+    })
+  })
+})
+
+io.setup(pin[12], io.DIR_OUT, () => {
+  db.child('rooms/sRyanRoom')
+    .on('value', (snapshot) => {
+    io.write(pin[12], snapshot.val(), (err) => {
+      if (err) throw err
+    })
+  })
+})
+
+io.setup(pin[13], io.DIR_OUT, () => {
+  db.child('rooms/sOffice')
+    .on('value', (snapshot) => {
+    io.write(pin[13], snapshot.val(), (err) => {
+      if (err) throw err
+    })
+  })
+})
+
+io.setup(pin[14], io.DIR_OUT, () => {
+  db.child('rooms/sOffice')
+    .on('value', (snapshot) => {
+    io.write(pin[14], snapshot.val(), (err) => {
+      if (err) throw err
+    })
+  })
+})
+
+io.setup(pin[15], io.DIR_OUT, () => {
+  db.child('rooms/sOffice')
+    .on('value', (snapshot) => {
+    io.write(pin[15], snapshot.val(), (err) => {
+      if (err) throw err
+    })
+  })
+})
