@@ -28,7 +28,7 @@ io.setup(pin[0], io.DIR_OUT, () => {
 })
 
 io.setup(pin[1], io.DIR_OUT, () => {
-  db.child('rooms/sDiningRoom')
+  db.child('rooms/sLibrary')
     .on('value', (snapshot) => {
     io.write(pin[1], snapshot.val(), (err) => {
       if (err) throw err
@@ -100,7 +100,7 @@ io.setup(pin[8], io.DIR_OUT, () => {
 })
 
 io.setup(pin[9], io.DIR_OUT, () => {
-  db.child('rooms/sNeekonBedroom')
+  db.child('rooms/sNeekon\'sBedroom')
     .on('value', (snapshot) => {
     io.write(pin[9], snapshot.val(), (err) => {
       if (err) throw err
@@ -127,7 +127,7 @@ io.setup(pin[11], io.DIR_OUT, () => {
 })
 
 io.setup(pin[12], io.DIR_OUT, () => {
-  db.child('rooms/sRyanRoom')
+  db.child('rooms/sRyan\'sBedroom')
     .on('value', (snapshot) => {
     io.write(pin[12], snapshot.val(), (err) => {
       if (err) throw err
@@ -136,7 +136,7 @@ io.setup(pin[12], io.DIR_OUT, () => {
 })
 
 io.setup(pin[13], io.DIR_OUT, () => {
-  db.child('rooms/sRyanRoom')
+  db.child('rooms/sRyan\'sBathroom')
     .on('value', (snapshot) => {
     io.write(pin[12], snapshot.val(), (err) => {
       if (err) throw err
@@ -145,7 +145,7 @@ io.setup(pin[13], io.DIR_OUT, () => {
 })
 
 io.setup(pin[14], io.DIR_OUT, () => {
-  db.child('rooms/sRyanRoom')
+  db.child('rooms/sOfficeBathroom')
     .on('value', (snapshot) => {
     io.write(pin[12], snapshot.val(), (err) => {
       if (err) throw err
@@ -154,7 +154,7 @@ io.setup(pin[14], io.DIR_OUT, () => {
 })
 
 io.setup(pin[15], io.DIR_OUT, () => {
-  db.child('rooms/sRyanRoom')
+  db.child('rooms/sMasterBathrooms')
     .on('value', (snapshot) => {
     io.write(pin[12], snapshot.val(), (err) => {
       if (err) throw err
