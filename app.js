@@ -156,7 +156,7 @@ io.setup(pin[14], io.DIR_OUT, () => {
 io.setup(pin[15], io.DIR_OUT, () => {
   db.child('rooms/sMasterBathrooms')
     .on('value', (snapshot) => {
-    io.write(pin[15a], snapshot.val(), (err) => {
+    io.write(pin[15], snapshot.val(), (err) => {
       if (err) throw err
     })
   })
