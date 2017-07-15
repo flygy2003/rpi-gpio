@@ -37,7 +37,7 @@ io.setup(pin[1], io.DIR_OUT, () => {
 })
 
 io.setup(pin[2], io.DIR_OUT, () => {
-  db.child('rooms/sGuestBathroom')
+  db.child('rooms/sFamilyRoom')
     .on('value', (snapshot) => {
     io.write(pin[2], snapshot.val(), (err) => {
       if (err) throw err
