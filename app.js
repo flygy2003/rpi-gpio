@@ -19,11 +19,30 @@ var pins = [11, 13,
             18, 22, 
             32, 36, 
             38, 40]
-var i;
+
+var roomies = [
+             'skitchen',
+             'sLivingRoom',
+             'sOffice',
+             'sOfficeBathroom',
+             'sNeekon\'sBedroom',
+             'sHomeworkRoom',
+             'sRyan\'sBathroom',
+             'sRyan\'sBedroom',
+             'sDiningRoom',
+             'sGallery',
+             'sGuestBathroom',
+             'sLibrary',
+             'sFamilyRoom',
+             'sMasterBedroom',
+             'sMasterBathrooms',
+             'sAll']
+var rooms = roomies.sort()
+var i = 0;
 for (i in pins) {    
   io.setup(pins[i], io.DIR_OUT, () => {
     console.log(`index: ${i}`)
-    db.child(`rooms/${i}`)
+    db.child(`rooms/${rooms[i]}`)
       .on('value', (snapshot) => {
       io.write(pins[i], snapshot.val(), (err) => {
         if (err) {
