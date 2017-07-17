@@ -12,7 +12,7 @@ fb.initializeApp(config)
 
 var db = fb.database().ref()
 var pins = [11, 13, 
-            15, 24, 
+            15, 29, 
             31, 33, 
             35, 7, 
             12, 16, 
