@@ -38,17 +38,163 @@ var roomies = [
              'sMasterBathrooms',
              'sAll']
 var rooms = roomies.sort()
-var i = 0;
-for (i in pins) {    
-  io.setup(pins[i], io.DIR_OUT, () => {
-    console.log(`index: ${i}`)
-    db.child(`rooms/${rooms[i]}`)
-      .on('value', (snapshot) => {
-      io.write(pins[i], snapshot.val(), (err) => {
-        if (err) {
-          throw err
-        }
-      })
+io.setup(pins[0], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[0]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[0], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
     })
   })
-} 
+})
+io.setup(pins[1], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[1]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[1], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[2], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[2]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[2], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[3], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[3]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[3], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[4], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[4]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[4], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[5], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[5]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[5], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[6], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[6]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[6], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[7], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[7]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[7], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[8], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[8]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[8], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[9], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[9]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[9], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[10], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[10]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[10], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[11], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[11]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[11], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[12], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[12]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[12], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[13], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[13]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[13], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[14], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[14]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[14], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
+io.setup(pins[15], io.DIR_OUT, () => {
+  db.child(`rooms/${rooms[15]}`)
+    .on('value', (snapshot) => {
+    io.write(pins[15], snapshot.val(), (err) => {
+      if (err) {
+        throw err
+      }
+    })
+  })
+})
