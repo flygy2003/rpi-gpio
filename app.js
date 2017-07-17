@@ -25,7 +25,7 @@ for (i in pins) {
     console.log(`index: ${i}`)
     db.child(`rooms/${i}`)
       .on('value', (snapshot) => {
-      io.write(pin[i], snapshot.val(), (err) => {
+      io.write(pins[i], snapshot.val(), (err) => {
         if (err) {
           throw err
         }
