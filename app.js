@@ -40,6 +40,7 @@ var roomies = [
              'sMasterBathrooms',
              'sAll']
 var rooms = roomies.sort()
+
 io.setup(pins[0], io.DIR_OUT, () => {
   db.child(`rooms/${rooms[0]}`)
     .on('value', (snapshot) => {
@@ -61,7 +62,7 @@ io.setup(pins[1], io.DIR_OUT, () => {
   })
 })
 io.setup(pins[2], io.DIR_OUT, () => {
-  db.child(`rooms/${rooms[2]}`)
+  db.child(`rooms/${rooms[6]}`)
     .on('value', (snapshot) => {
     io.write(pins[2], snapshot.val(), (err) => {
       if (err) {
@@ -101,7 +102,7 @@ io.setup(pins[5], io.DIR_OUT, () => {
   })
 })
 io.setup(pins[6], io.DIR_OUT, () => {
-  db.child(`rooms/${rooms[6]}`)
+  db.child(`rooms/${rooms[3]}`)
     .on('value', (snapshot) => {
     io.write(pins[6], snapshot.val(), (err) => {
       if (err) {
@@ -121,7 +122,7 @@ io.setup(pins[7], io.DIR_OUT, () => {
   })
 })
 io.setup(pins[8], io.DIR_OUT, () => {
-  db.child(`rooms/${rooms[8]}`)
+  db.child(`rooms/${rooms[3]}`)
     .on('value', (snapshot) => {
     io.write(pins[8], snapshot.val(), (err) => {
       if (err) {
@@ -131,7 +132,7 @@ io.setup(pins[8], io.DIR_OUT, () => {
   })
 })
 io.setup(pins[9], io.DIR_OUT, () => {
-  db.child(`rooms/${rooms[9]}`)
+  db.child(`rooms/${rooms[15]}`)
     .on('value', (snapshot) => {
     io.write(pins[9], snapshot.val(), (err) => {
       if (err) {
